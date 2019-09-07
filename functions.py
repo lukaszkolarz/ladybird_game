@@ -13,5 +13,3 @@ def write_in_window(text, size, color, window, width, height, middle=True, ):
         y = height
 
     window.blit(render, (x, y))
-
-
