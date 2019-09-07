@@ -34,3 +34,9 @@ class Player:
             self.x_dir = (-self.x_dir)
         if self.y_start > self.window_height or self.y_start < 0:
             self.y_dir = (-self.y_dir)
+
+    def restart(self):
+        self.x_start = (self.window_width - self.width)/2
+        self.y_start = (self.window_height - self.height)/2
+        self.x_dir = 0
+        self.y_dir = 0

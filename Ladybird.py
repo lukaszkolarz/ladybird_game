@@ -8,8 +8,8 @@ class Ladybird:
         self.dimension = 32
         self.window_width = window_width
         self.window_height = window_height
-        self.x_start = random.randint(0, (window_width-self.dimension))
-        self.y_start = random.randint(0, (window_height-self.dimension))
+        self.x_start = random.randint(0, (self.window_width-self.dimension))
+        self.y_start = random.randint(0, (self.window_height-self.dimension))
         self.image = pg.image.load(os.path.join('ladybird.png'))
         self.empty = pg.image.load(os.path.join('ladybird_empty.png'))
         self.window = window
@@ -49,3 +49,8 @@ class Ladybird:
             return True
         else:
             return False
+
+    def restart(self):
+        self.x_start = random.randint(0, (self.window_width - self.dimension))
+        self.y_start = random.randint(0, (self.window_height - self.dimension))
+        self.direction()
