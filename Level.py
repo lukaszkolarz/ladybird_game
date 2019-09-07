@@ -39,7 +39,7 @@ class Level:
                     self.display = "victory_in"
 
     def choice(self):
-        self.window.fill((255, 255, 255))
+        self.window.fill((0, 0, 0))
         self.window.blit(self.menu_background, ((self.window_width - 602)/2, (self.window_height - 602)/2))
 
     def victory_in(self):
